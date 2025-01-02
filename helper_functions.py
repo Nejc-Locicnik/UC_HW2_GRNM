@@ -2,8 +2,10 @@ import itertools
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def get_input_signals(n=3, amp=100):
     return [sig[::-1] for sig in itertools.product([0, amp], repeat=n)]
+
 
 def visualize(T, Y, grn=None, names=None):
     fig, ax = plt.subplots(len(Y[0]), 1, figsize=(10, 5))
@@ -18,8 +20,9 @@ def visualize(T, Y, grn=None, names=None):
     ax[-1].set_xlabel("time [a.u.]")
     fig.show()
 
+
 def test_inputs(inputs, x=250):
-    T = np.arange(2**len(inputs[0]) * x)
+    T = np.arange(2 ** len(inputs[0]) * x)
 
     Y = []
     for sig in inputs:
