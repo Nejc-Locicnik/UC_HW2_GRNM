@@ -22,7 +22,7 @@ Hkrati multiplekserji predstavljajo poln funkcijski nabor. To pomeni, da z upora
 
 Na sliki (REF) je prikazana najbolj osnovna logična predstavitev multiplekserja, izvedena z uporabo NOT, AND in OR logičnih vrat, po kateri smo se tudi zgledovali pri realizaciji multiplekserja z orodjem GReNMlin.
 
-TODO: Slika osnovne implementacije MUX-a (z NOT, AND in OR vrati)
+[Slika: Osnovna implementacija MUX-a (z NOT, AND in OR vrati)](images/MUX-log-vezje.jpg)
 
 ## Demultiplekser
 
@@ -32,7 +32,7 @@ Demultiplekserji so nepogrešljivi v digitalnih sistemih, kjer je treba razpored
 
 Slika (REF) prikazuje osnovno logično predstavitev demultiplekserja, katero izvedemo z uporabo NOT in AND logičnih vrat. Tudi ta shema je služila za zgled pri implementaciji multiplekserja z orodjem GReNMlin.
 
-TODO: Slika osnovne implementacije DEMUX-a (z NOT in AND vrati)
+[Slika: Osnovna implementacija DEMUX-a (z NOT in AND vrati)](images/DEMUX-log-vezje.jpg)
 
 ### 2:1 MUX
 
