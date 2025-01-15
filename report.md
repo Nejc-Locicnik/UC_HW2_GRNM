@@ -6,7 +6,7 @@
 
 TODO: opis kaj je, kako procesiramo na podlagi expresije genov
 
-### GReNMlin 
+### GReNMlin
 
 TODO: opis orodja
 
@@ -71,7 +71,7 @@ Implementacija osnovnega 2:1 multiplekserja je od samega začetka delovala brez 
 Posplošen MUX smo razvili po izrazu:
 
 $$
-Y = (X_1 \cdot \overline S_1 \cdot \overline S_2 \cdot \dots \cdot \overline S_{\log_2 N}) + (X_2 \cdot S_1 \cdot \overline S_2 \cdot \dots \cdot \overline S_{\log_2 N}) + \dots + (X_N \cdot S_1 \cdot S_2 \cdot \dots \cdot S_{\log_2 N}) 
+Y = (X_1 \cdot \overline S_1 \cdot \overline S_2 \cdot \dots \cdot \overline S_{\log_2 N}) + (X_2 \cdot S_1 \cdot \overline S_2 \cdot \dots \cdot \overline S_{\log_2 N}) + \dots + (X_N \cdot S_1 \cdot S_2 \cdot \dots \cdot S_{\log_2 N})
 $$
 
 Izsek programske kode (REF na izsek programske kode za posplošen MUX) prikazuje logiko delovanja funkcije, ki zgenerira poljuben MUX, definiran s parametrom N, ki predstavlja število vhodnih linij.
