@@ -25,11 +25,11 @@ To pomeni, da z uporabo multiplekserjev lahko implementiramo poljubno logično f
 Prav tako pa lahko z združevanjem več osnovnih (npr. 2:1) multiplekserjev ustvarimo večje in zmogljivejše multiplekserje, kot so 4:1, 8:1 in še večji.
 Slika (REF kombiniranje_muxov.png) prikazuje primer kombiniranja osnovnih multiplekserjev, za izgradnjo kompleksnejšega multiplekserja.
 
-[Slika: kombiniranje 2:1 MUX za izgradnjo 4:1 MUX](images/kombiniranje_muxov.png)
+![Slika: kombiniranje 2:1 MUX za izgradnjo 4:1 MUX](images/kombiniranje_muxov.png)
 
 Na sliki (REF MUX-log-vezje.jpg) je prikazana najbolj osnovna logična predstavitev multiplekserja, izvedena z uporabo NOT, AND in OR logičnih vrat, po kateri smo se tudi zgledovali pri realizaciji multiplekserja z orodjem GReNMlin.
 
-[Slika: Osnovna implementacija MUX-a (z NOT, AND in OR vrati)](images/MUX-log-vezje.jpg)
+![Slika: Osnovna implementacija MUX-a (z NOT, AND in OR vrati)](images/MUX-log-vezje.jpg)
 
 ### Demultiplekser
 
@@ -43,7 +43,7 @@ Uporabljajo se v komunikacijskih sistemih za distribucijo signalov v več kanalo
 Slika (REF DEMUX-log-vezje.jpg) prikazuje osnovno logično predstavitev demultiplekserja, katero izvedemo z uporabo NOT in AND logičnih vrat.
 Tudi ta shema je služila za zgled pri implementaciji multiplekserja z orodjem GReNMlin.
 
-[Slika: Osnovna implementacija DEMUX-a (z NOT in AND vrati)](images/DEMUX-log-vezje.jpg)
+![Slika: Osnovna implementacija DEMUX-a (z NOT in AND vrati)](images/DEMUX-log-vezje.jpg)
 
 ## Implementacija MUX in DEMUX z orodjem GReNMlin
 
@@ -79,7 +79,7 @@ Na podlagi teh rezultatov se kaže velik potencial za razvoj funkcije posplošen
 Takšna funkcija bi omogočala generiranje multiplekserjev poljubne kompleksnosti glede na število vhodnih linij, ki jih določi uporabnik.
 Posplošeni multiplekser bi lahko predstavljal dodatek oziroma izboljšavo obstoječega orodja GReNMlin.
 
-[Slika: Rezultati simulacije 2:1 MUX-a](images/2_1_MUX_signal_results.png)
+![Slika: Rezultati simulacije 2:1 MUX-a](images/2_1_MUX_signal_results.png)
 
 ### Posplošen MUX
 
@@ -177,7 +177,7 @@ my_grn.add_gene(10, regulators, products)
 
 Rezultati testiranja so prikazani na Sliki (REF rezultati testiranja 2:1 DEMUX-a).
 
-[Slika: Rezultati simulacije 2:1 DEMUX-a](images/2_1_DEMUX_signal_results.png)
+![Slika: Rezultati simulacije 2:1 DEMUX-a](images/2_1_DEMUX_signal_results.png)
 
 Tudi pri implementaciji demultiplekserjev nismo naleteli na nobene težave.
 Brez problemov smo razvili tudi kompleksnejše (4:1, 8:1, ...) demultiplekserje.
