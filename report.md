@@ -4,11 +4,20 @@
 
 ### Gensko regulatorno omrežje
 
-TODO: opis kaj je, kako procesiramo na podlagi expresije genov
+V biološkem procesiranju je modeliranje genskih regulacijskih omrežij (GRN) ključen računalniški pristop za raziskovanje kompleksnih regulacijskih interakcij med geni, transkripcijskimi faktorji in vplivi iz okolja. Ta omrežja uravnavajo izražanje genov, kar omogoča celicam, da se prilagodijo okolju, diferencirajo v specifične celične tipe in ohranjajo homeostazo. Z uporabo računalniških tehnik za modeliranje GRN lahko raziskovalci simulirajo in napovedujejo vedenje bioloških sistemov, analizirajo njihovo robustnost na motnje ter načrtujejo sintetične regulacijske sisteme za biotehnološke ali medicinske aplikacije.
+
+Modeliranje genskega izražanja je v zadnjih desetletjih postalo nepogrešljivo orodje v biološkem raziskovanju. Simulacije omogočajo preverjanje hipotez o izražanju genov, kar zmanjšuje potrebo po dolgotrajnih in dragih eksperimentih. Računalniško podprto modeliranje omogoča raziskovalcem, da preverijo pravilnost hipotez s simulacijami, kar zmanjšuje tveganje za neuspešne eksperimente. Pristop omogoča iterativni razvoj hipotez in eksperimentalnih načrtov, s čimer pospeši napredek pri razumevanju bioloških procesov.
 
 ### GReNMlin
 
-TODO: opis orodja
+GReNMlin (Gene Regulatory Network Modeling) je Pythonov paket, zasnovan za konstruiranje, simulacijo in analizo osnovnih logičnih komponent, kot so multiplekserji, števci in druga digitalna vezja, z uporabo genskih regulacijskih omrežij. Temelji na sistemih diferencialnih enačb, ki opisujejo dinamiko interakcij med geni in njihovimi regulatorji. Te enačbe omogočajo natančno modeliranje procesov, kot so aktivacija, represija in sinteza genov, kar uporabnikom omogoča simulacijo vedenja GRN v času.
+
+Postopek modeliranja logičnih komponent s pomočjo GRN v GReNMlinu je zasnovan na naslednjih korakih:
+
+Definicija omrežja: 
+1. Omrežje je definirano s specifikacijo species (vhodne in izhodne vrste), regulatorjev (povezave med vhodnimi vrstami) in produkta (izhodne vrste).
+2. Uporaba oblike SOP: Na podlagi preučenih primerov smo ugotovili, da je najpreprostejši način za realizacijo osnovnih logičnih komponent preoblikovanje njihovih formul v obliko Sum of Products (SOP). Pri tem vsak regulator ustreza enemu produktu (AND), združevanje več regulatorjev v en produkt pa ustreza njihovi vsoti (OR). Funkcija NOR se doseže z inverzijo tipa regulatorja.
+3. Enostavna izdelava komponent: Ta pristop omogoča preprost in pregleden način za izdelavo osnovnih logičnih komponent s pomočjo GRN. Poleg tega zagotavlja čiste signale že privzeto, brez potrebe po optimizaciji parametrov, kot sta kd ali n.
 
 ### Multiplekser
 
