@@ -1,5 +1,13 @@
 # Splošen MUX in DEMUX z orodjem GReNMlin (začasen naslov)
 
+## Povzetek
+V seminarski nalogi obravnavamo implementacijo in analizo multiplekserjev (MUX) in demultiplekserjev (DEMUX) z uporabo orodja GReNMlin, Pythonovega paketa za modeliranje genskih regulacijskih omrežij.
+Predstavimo uspešne implementacije osnovnih komponent, kot so 2:1 MUX in 1:2 DEMUX in razširitve na bolj kompleksne različice (npr. 4:1 MUX in 1:4 DEMUX).
+V seminarski nalogi razvijemo in predstavimo tudi funkcije, ki zgenerirajo poljuben MUX oziroma DEMUX, glede na število vhodnih oziroma izhodnih linij, ki jih uporabnik lahko poda kot parameter funckije.
+Te implementacije lahko služijo kot dodatek oziroma nadgradnja orodja GReNMlin.
+Razvite funkcije tudi ovrednotimo in izpostavimo njihove morebitne slabosti.
+V zadnjem delu seminarske naloge pa predstavimo še način optimizacije izhoda modelov genskih regulacijskih omrežij z uporabo genetskih algoritmov, ki pa jih zaradi njihove dolgotrajnosti in omejene izboljšave rezultatov nismo vključili v samo implementacijo funkcij za generiranje generaliziranih MUX in DEMUX struktur.
+
 ## Uvod
 
 ### Gensko regulatorno omrežje
@@ -287,3 +295,13 @@ Po začetnih poskusih povečanja kateregakoli parametra na primeru 2:1 MUX, se �
 Sklepno smo se odločili, da naši rezultati ustrezajo zadanim ciljem in dodatna optimizacija parametrov ne prinese dovolj dobrih izboljšav glede na vložen čas.
 
 ## Zaključek
+
+V seminarski nalogi smo v programskem jeziku Python s pomočjo orodja GReNMlin implementirali enostavne strukture multiplekserjev in demultiplekserjev.
+Zaradi uspešnega delovanja teh osnovnih struktur smo se odločili razviti funkcije, ki omogočajo samodejno generiranje želenih MUX in DEMUX struktur glede na parametre, ki jih določi uporabnik. 
+Medtem ko funkcija za generiranje DEMUX struktur uspešno zgenerira tudi kompleksne demultiplekserje (npr. 1:32 DEMUX) v sprejemljivem času, smo pri multiplekserjih naleteli na težave. 
+Simulacija za bolj kompleksne multiplekserje, kot je 16:1 MUX, se je izkazala za preveč časovno zahtevno, kar omejuje praktično uporabnost. 
+
+Poleg tega smo predstavili postopek uporabe genetskih algoritmov za optimizacijo izhodov multiplekserjev in demultiplekserjev. 
+Čeprav ti algoritmi ponujajo zanimivo možnost izboljšav, jih zaradi njihove dolgotrajne izvedbe in relativno majhnega vpliva na kakovost rezultatov nismo vključili v implementacijo.
+
+V prihodnjem razvoju bi lahko raziskali metode za hitrejše generiranje kompleksnejših multiplekserjev in učinkovitejšo optimizacijo parametrov, da bi dosegli bolj optimalne rezultate v realnem času.
