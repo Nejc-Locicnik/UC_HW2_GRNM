@@ -58,7 +58,7 @@ Tudi ta shema je služila za zgled pri implementaciji multiplekserja z orodjem G
 
 ### 2:1 MUX
 
-2:1 MUX smo z orodjem GReNMlin implementirali po Sliki (REF MUX-log-vezje.jpg), kot je razvidno iz odseka programske kode (REF na izsek programske kode 2:1 MUX).
+2:1 MUX smo z orodjem GReNMlin implementirali po sliki (REF MUX-log-vezje.jpg), kot je razvidno iz odseka programske kode (REF na izsek programske kode 2:1 MUX).
 
 ```python
 # input species
@@ -95,7 +95,7 @@ Posplošeni multiplekser bi lahko predstavljal dodatek oziroma izboljšavo obsto
 Posplošen MUX smo razvili po izrazu:
 
 $$
-Y = (X_1 \cdot \overline S_1 \cdot \overline S_2 \cdot \dots \cdot \overline S_{\log_2 N}) + (X_2 \cdot S_1 \cdot \overline S_2 \cdot \dots \cdot \overline S_{\log_2 N}) + \dots + (X_N \cdot S_1 \cdot S_2 \cdot \dots \cdot S_{\log_2 N})
+Y = (X_1 \cdot \overline S_1 \cdot \overline S_2 \cdot \ldots \cdot \overline S_{\log_2 N}) + (X_2 \cdot S_1 \cdot \overline S_2 \cdot \ldots \cdot \overline S_{\log_2 N}) + \ldots + (X_N \cdot S_1 \cdot S_2 \cdot \ldots \cdot S_{\log_2 N})
 $$
 
 Izsek programske kode (REF na izsek programske kode za posplošen MUX) prikazuje logiko delovanja funkcije, ki zgenerira poljuben MUX, definiran s parametrom N, ki predstavlja število vhodnih linij.
@@ -159,7 +159,7 @@ Funkcijo za posplošen multiplekser bi bilo torej smiselno uporabljati le za osn
 
 ### 2:1 DEMUX
 
-2:1 DEMUX smo implementirali po Sliki (REF DEMUX-log-vezje.jpg).
+2:1 DEMUX smo implementirali po sliki (REF DEMUX-log-vezje.jpg).
 Implementacija je prikazana v izseku programske kode (REF na izsek programske kode za 2:1 DEMUX).
 
 ```python
@@ -184,7 +184,7 @@ products = [{'name': 'DEMUX2'}]
 my_grn.add_gene(10, regulators, products)
 ```
 
-Rezultati testiranja so prikazani na Sliki (REF rezultati testiranja 2:1 DEMUX-a).
+Rezultati testiranja so prikazani na sliki (REF rezultati testiranja 2:1 DEMUX-a).
 
 ![Slika: Rezultati simulacije 2:1 DEMUX-a](images/2_1_DEMUX_signal_results.png)
 
@@ -197,10 +197,10 @@ Tudi tokrat smo opazili potencial, za razvoj funkcije za generiranje posplošene
 Posplošen DEMUX smo razvili po sledečih izrazih:
 
 $$
-Y_1 = X_1 \cdot \overline S_1 \cdot \overline S_2 \cdot \dots \cdot \overline S_{\log_2{N}}\\
-Y_2 = X_1 \cdot S_1 \cdot \overline S_2 \cdot \dots \cdot \overline S_{\log_2{N}}\\
+Y_1 = X_1 \cdot \overline S_1 \cdot \overline S_2 \cdot \ldots \cdot \overline S_{\log_2{N}}\\
+Y_2 = X_1 \cdot S_1 \cdot \overline S_2 \cdot \ldots \cdot \overline S_{\log_2{N}}\\
 \vdots\\
-Y_N = X_1 \cdot S_1 \cdot S_2 \cdot \dots \cdot S_{\log_2{N}}
+Y_N = X_1 \cdot S_1 \cdot S_2 \cdot \ldots \cdot S_{\log_2{N}}
 $$
 
 Izsek programske kode (REF na izsek programske kode za posplošen DEMUX), prikazuje našo implementacijo funkcije.
@@ -261,5 +261,22 @@ Poleg tega pa je funkcija delovala hitreje, kot funkcija za posplošen MUX.
 | 32  |                    16.22 |
 
 ## Optimizacija
+
+Za izboljšavo naših implementacij smo uporabili genetske algoritme.
+Ti so nam omogočili optimizacijo parametrov $K_d$ in $n$ regulatornih elementov.
+
+Simulacije agentov v algoritmu smo ocenili s cenilno funkcijo
+
+$$
+f(s) = \frac{1}{\sum_{i=1}^{N}|s_i - o_i| + \epsilon}
+$$
+
+, kjer $N$ predstavlja število diskretnih korakov simulacije, $\epsilon = 10^{-6}$.
+Ta na diskretnih korakih izračuna absolutno razliko med optimalno ($o$) in simulirano ($s$) vrednostjo.
+
+Z našo implementacijo optimizacije z genetskimi algoritmi smo dosegli le malo boljše rezultate kot tiste, ki smo jih dobili z ročno optimizacijo parametrov.
+Predvidevamo, da bi za boljše rezultate morali dokaj povečati število generacij in velikost populacije.
+Po začetnih poskusih povečanja kateregakoli parametra na primeru 2:1 MUX, se čas optimizacije povečuje v rangu več ur.
+Sklepno smo se odločili, da naši rezultati ustrezajo zadanim ciljem in dodatna optimizacija parametrov ne prinese dovolj dobrih izboljšav glede na vložen čas.
 
 ## Zaključek
